@@ -3,6 +3,7 @@ import "./App.css";
 import AuthProvider from "./context/AuthProvider";
 import About from "./pages/About/About";
 import Appointment from "./pages/Appointment/Appointment";
+import Contact from "./pages/Contact/Contact";
 import Footer from "./pages/Home/Footer/Footer";
 import Home from "./pages/Home/Home/Home";
 import NavBar from "./pages/Home/NavBar/NavBar";
@@ -34,6 +35,9 @@ function App() {
           </Route>
           <Route path="/about">
             <About></About>
+          </Route>
+          <Route path="/contact">
+            <Contact></Contact>
           </Route>
         </Switch>
         <Footer />
