@@ -9,8 +9,7 @@ const SingleService = ({ item }) => {
         <div className="w-3/5 mr-3">
           <div className=" mb-6">
             <h2 className="text-3xl mb-4">Description:</h2>
-            <p className="leading-8"></p>
-            {description}
+            <p className="leading-8">{description}</p>
           </div>
           <div>
             <h2 className="text-3xl mb-4">Treatment:</h2>
