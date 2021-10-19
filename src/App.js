@@ -1,6 +1,7 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "./App.css";
 import AuthProvider from "./context/AuthProvider";
+import Appointment from "./pages/Appointment/Appointment";
 import Footer from "./pages/Home/Footer/Footer";
 import Home from "./pages/Home/Home/Home";
 import NavBar from "./pages/Home/NavBar/NavBar";
@@ -27,8 +28,8 @@ function App() {
           <Route path="/service-detail/:serviceId">
             <ServiceDetail></ServiceDetail>
           </Route>
-          <Route path="/test">
-            <Test></Test>
+          <Route path="/appointment">
+            <Appointment></Appointment>
           </Route>
         </Switch>
         <Footer />
