@@ -30,7 +30,7 @@ const Login = () => {
     passwordReset(email);
   };
 
-  const googleSinginHandler = () => {
+  const googleSigninHandler = () => {
     googleSignIn();
   };
   return (
@@ -93,7 +93,7 @@ const Login = () => {
           </form>
           <div className="mx-auto">
             <button
-              onClick={googleSinginHandler}
+              onClick={googleSigninHandler}
               class="w-full px-6 py-2 mt-4 text-black bg-white border-solid border-2 border-blue-500  rounded-lg"
             >
               Sign in with Google

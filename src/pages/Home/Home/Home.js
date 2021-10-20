@@ -13,7 +13,12 @@ const Home = () => {
     <>
       <div className="top-section p-8 md:p-36 md:flex">
         <div className="w-3/5">
-          <h2 className="text-2xl">Optic Eye Center</h2>
+          <h2 className="text-2xl font-semibold">
+            <span className="text-purple-900">
+              <i class="fas fa-eye"></i>ptic
+            </span>{" "}
+            Eye Center
+          </h2>
           <div className="py-5">
             <h1 className="text-6xl font-bold pb-7">
               We Only Give Best Care To Your Eyes

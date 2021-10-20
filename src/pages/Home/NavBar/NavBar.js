@@ -23,10 +23,26 @@ function NavBar() {
   };
   return (
     <div>
-      <div class="md:flex justify-end p-3 space-x-4 hidden ">
-        <p>Phone: 5555555</p>
-        <p>Location: Ramnogor, Sadar, Dinajpur</p>
-        <p>facebook, insta, twitter</p>
+      <div className="md:flex justify-end p-3 space-x-4 hidden">
+        <p>
+          <i className="fas fa-phone-alt pr-2 text-blue-800"></i>
+          <span className="font-semibold">Phone</span> 08+XXXXXXX
+        </p>
+        <p>
+          <i class="far fa-envelope pr-2 text-blue-800"></i>
+          <span className="font-semibold">Email</span> support@optic-center.com
+        </p>
+        <p>
+          <i class="fas fa-map-marker-alt pr-2 text-blue-800"></i>
+          <span className="font-semibold">Location</span> 123, Mirpur,
+          Dhaka-1200
+        </p>
+        <p>
+          <span className="font-semibold pr-2">Follow Us:</span>
+          <i class="fab fa-facebook-square pr-2 hover:text-blue-800"></i>
+          <i class="fab fa-twitter-square pr-2 hover:text-blue-800"></i>
+          <i class="fab fa-instagram-square hover:text-blue-800"></i>
+        </p>
       </div>
       <nav className="bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -41,40 +57,40 @@ function NavBar() {
               </div>
               <div className="hidden md:block">
                 <div className="ml-10 flex justify-end space-x-4">
-                  <a
-                    href="#"
+                  <Link
+                    to="/"
                     className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
-                    Dashboard
-                  </a>
+                    Home
+                  </Link>
 
-                  <a
-                    href="#"
+                  <Link
+                    to="/appointment"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
-                    Team
-                  </a>
+                    Appointment
+                  </Link>
 
-                  <a
-                    href="#"
+                  <Link
+                    to="/contact"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
-                    Projects
-                  </a>
+                    Contact Us
+                  </Link>
 
-                  <a
-                    href="#"
+                  <Link
+                    to="/about"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
-                    Calendar
-                  </a>
+                    About Us
+                  </Link>
 
-                  <a
-                    href="#"
+                  <Link
+                    href="/shop"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
-                    Reports
-                  </a>
+                    Shop
+                  </Link>
                 </div>
               </div>
             </div>
@@ -87,15 +103,18 @@ function NavBar() {
                   Logout
                 </button>
               ) : (
-                <a
+                <Link
+                  to="/login"
                   className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  href="/login"
                 >
                   Login
-                </a>
+                </Link>
               )}
               <span className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
-                Sign in as: {user.displayName}
+                Sign in as:{" "}
+                <span className="text-blue-800">
+                  {user.displayName ? user.displayName : user.email}
+                </span>
               </span>
             </div>
             <div className="-mr-2 flex md:hidden">
@@ -146,40 +165,40 @@ function NavBar() {
 
         <div className={`md:hidden ${display}`} id="mobile-menu">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a
-              href="#"
-              className="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium"
+            <Link
+              to="/"
+              className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-sm font-medium"
             >
               Dashboard
-            </a>
+            </Link>
 
-            <a
-              href="#"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            <Link
+              to="/appointment"
+              className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
             >
-              Team
-            </a>
+              Appointment
+            </Link>
 
-            <a
-              href="#"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            <Link
+              href="/contact"
+              className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
             >
-              Projects
-            </a>
+              Contact Us
+            </Link>
 
-            <a
-              href="#"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            <Link
+              href="/about"
+              className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
             >
-              Calendar
-            </a>
+              About Us
+            </Link>
 
-            <a
-              href="#"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+            <Link
+              href="/shop"
+              className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
             >
-              Reports
-            </a>
+              Shop
+            </Link>
           </div>
         </div>
       </nav>

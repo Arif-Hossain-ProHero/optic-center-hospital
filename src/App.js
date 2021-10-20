@@ -8,6 +8,7 @@ import Footer from "./pages/Home/Footer/Footer";
 import Home from "./pages/Home/Home/Home";
 import NavBar from "./pages/Home/NavBar/NavBar";
 import Login from "./pages/Login/Login";
+import PrivateRoute from "./pages/PrivateRoute/PrivateRoute";
 import Registration from "./pages/Registration/Registration";
 import ServiceDetail from "./pages/ServiceDetail/ServiceDetail";
 import Test from "./pages/Test/Test";
@@ -21,24 +22,31 @@ function App() {
           <Route exact path="/">
             <Home></Home>
           </Route>
+          <Route exact path="/home">
+            <Home></Home>
+          </Route>
           <Route path="/login">
             <Login></Login>
           </Route>
           <Route path="/registration">
             <Registration></Registration>
           </Route>
-          <Route path="/service-detail/:serviceId">
-            <ServiceDetail></ServiceDetail>
-          </Route>
-          <Route path="/appointment">
-            <Appointment></Appointment>
-          </Route>
           <Route path="/about">
             <About></About>
           </Route>
-          <Route path="/contact">
+          <PrivateRoute path="/service-detail/:serviceId">
+            <ServiceDetail></ServiceDetail>
+          </PrivateRoute>
+          <PrivateRoute path="/appointment">
+            <Appointment></Appointment>
+          </PrivateRoute>
+
+          <PrivateRoute path="/contact">
             <Contact></Contact>
-          </Route>
+          </PrivateRoute>
+          {/* <PrivateRoute path="/shop">
+            <Shop></Shop>
+          </PrivateRoute> */}
         </Switch>
         <Footer />
       </BrowserRouter>
