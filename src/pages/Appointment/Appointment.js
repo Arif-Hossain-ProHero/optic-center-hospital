@@ -5,7 +5,9 @@ const Appointment = () => {
   return (
     <div className=" appointment-container">
       <div className="container mx-auto pb-5">
-        <h1 className="text-4xl py-12 text-center">Book An Appointment</h1>
+        <h1 className="text-4xl font-bold py-12 text-center">
+          Book An Appointment
+        </h1>
         <div className="flex">
           <div className="w-2/5 mr-3 hidden md:block">
             <img

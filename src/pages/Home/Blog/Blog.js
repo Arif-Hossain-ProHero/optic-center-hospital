@@ -35,7 +35,7 @@ const Blog = () => {
           <div className="custom-width rounded shadow-lg">
             <img
               className="service-img"
-              src="http://www.simpleimageresizer.com/_uploads/photos/12669b88/choose-main1_400x272.jpg"
+              src="https://i.ibb.co/xqpJmt2/main2.png"
               alt="eye"
             />
             <div className="px-6 py-4">
@@ -62,7 +62,7 @@ const Blog = () => {
           <div className="custom-width rounded shadow-lg">
             <img
               className="service-img"
-              src="http://www.simpleimageresizer.com/_uploads/photos/12669b88/main2_400x272.jpg"
+              src="https://i.ibb.co/bL7tQbQ/choose-main1.png"
               alt="Sunset in the mountains"
             />
             <div className="px-6 py-4">
@@ -116,7 +116,7 @@ const Blog = () => {
           <div className="custom-width rounded shadow-lg">
             <img
               className="service-img"
-              src="http://www.simpleimageresizer.com/_uploads/photos/12669b88/blog-4_400x272.jpg"
+              src="https://i.ibb.co/7SrySXK/blog-4.png"
               alt="eye"
             />
             <div className="px-6 py-4">

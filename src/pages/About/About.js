@@ -30,7 +30,7 @@ const About = () => {
         <div className="w-2/5">
           <img
             className="w-full"
-            src="https://thumbs.dreamstime.com/b/doctors-hospital-corridor-nurse-pushing-gurney-stretcher-bed-male-senior-female-patient-32154012.jpg"
+            src="https://i.ibb.co/0nS6wfN/Group-of-medical-doctors-Isolated-on-white-background.jpg"
             alt="img"
           />
         </div>

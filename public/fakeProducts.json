@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Adult Eye Glass",
+    "img": "https://templates.hibootstrap.com/opnix/default/assets/images/shop/1.png",
+    "price": "$30"
+  },
+  {
+    "id": 2,
+    "name": "Contact Lenses",
+    "img": "https://templates.hibootstrap.com/opnix/default/assets/images/shop/2.png",
+    "price": "$40"
+  },
+  {
+    "id": 3,
+    "name": "Stereo Eye Glass",
+    "img": "https://templates.hibootstrap.com/opnix/default/assets/images/shop/6.png",
+    "price": "$60"
+  },
+  {
+    "id": 4,
+    "name": "Contact Lenses",
+    "img": "https://templates.hibootstrap.com/opnix/default/assets/images/shop/4.png",
+    "price": "$50"
+  },
+  {
+    "id": 5,
+    "name": "Tahoma Eye Glass",
+    "img": "https://templates.hibootstrap.com/opnix/default/assets/images/shop/5.png",
+    "price": "$70"
+  },
+  {
+    "id": 6,
+    "name": "Gucci Eye Glass",
+    "img": "https://templates.hibootstrap.com/opnix/default/assets/images/shop/3.png",
+    "price": "$90"
+  }
+]

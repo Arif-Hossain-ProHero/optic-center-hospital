@@ -13,6 +13,7 @@ import Registration from "./pages/Registration/Registration";
 import ServiceDetail from "./pages/ServiceDetail/ServiceDetail";
 import NotFound from "./pages/NotFound/NotFound";
 import Test from "./pages/Test/Test";
+import Shop from "./pages/Shop/Shop";
 
 function App() {
   return (
@@ -41,13 +42,13 @@ function App() {
           <PrivateRoute path="/appointment">
             <Appointment></Appointment>
           </PrivateRoute>
-
+          <PrivateRoute path="/shop">
+            <Shop></Shop>
+          </PrivateRoute>
           <PrivateRoute path="/contact">
             <Contact></Contact>
           </PrivateRoute>
-          {/* <PrivateRoute path="/shop">
-            <Shop></Shop>
-          </PrivateRoute> */}
+
           <Route path="*">
             <NotFound></NotFound>
           </Route>
