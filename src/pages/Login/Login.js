@@ -5,8 +5,15 @@ import { Link, useLocation } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 
 const Login = () => {
-  const { passwordLogin, googleSignIn, user, message, error, passwordReset } =
-    useAuth();
+  const {
+    passwordLogin,
+    googleSignIn,
+    user,
+    message,
+    error,
+    passwordReset,
+    setIsLoading,
+  } = useAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const history = useHistory();
@@ -21,25 +28,28 @@ const Login = () => {
     setPassword(e.target.value);
   };
 
+  // login with email and password
   const submitHandler = (e) => {
     e.preventDefault();
     if (user.email) {
       alert("You are already logged in.");
       return;
     }
-
     passwordLogin(email, password)
       .then((res) => {
         history.push(redirect_uri);
       })
       .catch((error) => {
         alert(error.message);
-      });
+      })
+      .finally(() => setIsLoading(false));
   };
+
+  // password reset
   const handlePasswordReset = () => {
     passwordReset(email);
   };
-
+  //  google signin
   const googleSigninHandler = () => {
     googleSignIn()
       .then((res) => {
@@ -47,7 +57,8 @@ const Login = () => {
       })
       .catch((error) => {
         alert(error.message);
-      });
+      })
+      .finally(() => setIsLoading(false));
   };
   return (
     <div>
@@ -109,6 +120,7 @@ const Login = () => {
               </div>
             </div>
           </form>
+          {/* google singin option  */}
           <div className="mx-auto">
             <button
               onClick={googleSigninHandler}

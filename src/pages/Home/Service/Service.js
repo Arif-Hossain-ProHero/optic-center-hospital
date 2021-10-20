@@ -18,7 +18,7 @@ const Service = ({ service }) => {
           <div className="px-6 pt-4 pb-2 text-center">
             <Link to={`/service-detail/${id}`}>
               {" "}
-              <button className="rounded-full bg-gray-700 py-2 px-5 text-white hover:bg-gray-800">
+              <button className="rounded-full bg-gray-700 py-2 px-5 text-white hover:bg-purple-800">
                 View More
               </button>
             </Link>

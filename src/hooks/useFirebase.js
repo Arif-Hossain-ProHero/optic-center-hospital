@@ -11,6 +11,7 @@ import {
   sendPasswordResetEmail,
 } from "firebase/auth";
 import { useEffect, useState } from "react";
+import { useHistory } from "react-router";
 
 const useFirebase = () => {
   const [user, setUser] = useState({});
@@ -19,9 +20,11 @@ const useFirebase = () => {
   initializeAuth();
   const auth = getAuth();
   const googleProvider = new GoogleAuthProvider();
+  const [isLoading, setIsLoading] = useState(true);
 
   // Create user
   const createUser = (email, password) => {
+    setIsLoading(true);
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
         setUser(result.user);
@@ -29,10 +32,12 @@ const useFirebase = () => {
       })
       .catch((error) => {
         setError(error.message);
-      });
+      })
+      .finally(() => setIsLoading(false));
   };
   // sign in using google account
   const googleSignIn = () => {
+    setIsLoading(true);
     return signInWithPopup(auth, googleProvider);
     // .then((result) => {
     //   setUser(result.user);
@@ -46,6 +51,7 @@ const useFirebase = () => {
 
   // login user
   const passwordLogin = (email, password) => {
+    setIsLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
     // .then((result) => {
     //   console.log(result.user);
@@ -75,23 +81,29 @@ const useFirebase = () => {
 
   useEffect(() => {
     const auth = getAuth();
-    onAuthStateChanged(auth, (user) => {
+    const unSubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user);
       } else {
         setUser({});
       }
+      setIsLoading(false);
     });
+    return () => unSubscribe;
   }, []);
 
   //logout
   const logOut = () => {
+    setIsLoading(true);
     signOut(auth)
       .then(() => {
         setUser({});
       })
       .catch((error) => {
         setMessage("can not logging out");
+      })
+      .finally(() => {
+        setIsLoading(false);
       });
   };
 
@@ -105,6 +117,8 @@ const useFirebase = () => {
     updateName,
     message,
     passwordReset,
+    isLoading,
+    setIsLoading,
   };
 };
 

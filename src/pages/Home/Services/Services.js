@@ -16,7 +16,7 @@ const Services = () => {
       </h1>
       <div className="md:grid grid-cols-3 gap-8 container mx-auto">
         {services.map((service) => (
-          <Service key={service.key} service={service}></Service>
+          <Service key={service.id} service={service}></Service>
         ))}
       </div>
     </div>

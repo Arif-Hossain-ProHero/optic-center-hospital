@@ -30,7 +30,7 @@ const Contact = () => {
             ></textarea>
           </div>
           <input
-            className="rounded-full bg-gray-800 py-2 px-6 text-white hover:bg-gray-700 transition duration-500"
+            className="rounded-full bg-gray-800 py-2 px-6 text-white hover:bg-purple-700 transition duration-500"
             type="button"
             value="Submit"
             name=""

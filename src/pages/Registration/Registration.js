@@ -54,6 +54,7 @@ const Registration = () => {
             )}
             {passError}
           </div>
+          {/* registration form  */}
           <form onSubmit={submitHandler}>
             <div className="mt-4">
               <div>
@@ -113,6 +114,7 @@ const Registration = () => {
               <div className="text-center py-3">
                 --------------------OR-------------------
               </div>
+              {/* Google signin  */}
               <div className="mx-auto">
                 <button
                   onClick={googleSinginHandler}
