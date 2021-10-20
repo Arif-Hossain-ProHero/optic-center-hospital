@@ -29,19 +29,19 @@ function NavBar() {
           <span className="font-semibold">Phone</span> 08+XXXXXXX
         </p>
         <p>
-          <i class="far fa-envelope pr-2 text-blue-800"></i>
+          <i className="far fa-envelope pr-2 text-blue-800"></i>
           <span className="font-semibold">Email</span> support@optic-center.com
         </p>
         <p>
-          <i class="fas fa-map-marker-alt pr-2 text-blue-800"></i>
+          <i className="fas fa-map-marker-alt pr-2 text-blue-800"></i>
           <span className="font-semibold">Location</span> 123, Mirpur,
           Dhaka-1200
         </p>
         <p>
           <span className="font-semibold pr-2">Follow Us:</span>
-          <i class="fab fa-facebook-square pr-2 hover:text-blue-800"></i>
-          <i class="fab fa-twitter-square pr-2 hover:text-blue-800"></i>
-          <i class="fab fa-instagram-square hover:text-blue-800"></i>
+          <i className="fab fa-facebook-square pr-2 hover:text-blue-800"></i>
+          <i className="fab fa-twitter-square pr-2 hover:text-blue-800"></i>
+          <i className="fab fa-instagram-square hover:text-blue-800"></i>
         </p>
       </div>
       <nav className="bg-gray-800">

@@ -28,22 +28,34 @@ const Login = () => {
       return;
     }
 
-    passwordLogin(email, password);
+    passwordLogin(email, password)
+      .then((res) => {
+        history.push(redirect_uri);
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
   };
   const handlePasswordReset = () => {
     passwordReset(email);
   };
 
   const googleSigninHandler = () => {
-    googleSignIn().then((res) => {
-      history.push(redirect_uri);
-    });
+    googleSignIn()
+      .then((res) => {
+        history.push(redirect_uri);
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
   };
   return (
     <div>
-      <div class="flex items-center justify-center min-h-screen bg-gray-100 form-container">
-        <div class="md:w-1/2 px-8 py-6 mt-4 text-left bg-white shadow-lg">
-          <h3 class="text-2xl font-bold text-center">Login to your account</h3>
+      <div className="flex items-center justify-center min-h-screen bg-gray-100 form-container">
+        <div className="md:w-1/2 px-8 py-6 mt-4 text-left bg-white shadow-lg">
+          <h3 className="text-2xl font-bold text-center">
+            Login to your account
+          </h3>
           <div>
             {message ? (
               <h2 className="text-green-600">{message}</h2>
@@ -52,9 +64,9 @@ const Login = () => {
             )}
           </div>
           <form onSubmit={submitHandler}>
-            <div class="mt-4">
+            <div className="mt-4">
               <div>
-                <label class="block" for="email">
+                <label className="block" for="email">
                   Email
                 </label>
                 <input
@@ -62,22 +74,22 @@ const Login = () => {
                   required
                   type="text"
                   placeholder="Email"
-                  class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
+                  className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
                 />
               </div>
-              <div class="mt-4">
-                <label class="block">Password</label>
+              <div className="mt-4">
+                <label className="block">Password</label>
                 <input
                   type="password"
                   onBlur={passwordHandler}
                   required
                   placeholder="Password"
-                  class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
+                  className="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
                 />
               </div>
 
-              <div class="flex items-baseline justify-between">
-                <button class="w-full px-6 py-2 mt-4 text-white bg-gray-800 rounded-lg hover:bg-blue-900">
+              <div className="flex items-baseline justify-between">
+                <button className="w-full px-6 py-2 mt-4 text-white bg-gray-800 rounded-lg hover:bg-blue-900">
                   Login
                 </button>
               </div>
@@ -100,7 +112,7 @@ const Login = () => {
           <div className="mx-auto">
             <button
               onClick={googleSigninHandler}
-              class="w-full px-6 py-2 font-semibold mt-4 text-black bg-white border-solid border-2 border-blue-500  rounded-lg"
+              className="w-full px-6 py-2 font-semibold mt-4 text-black bg-white border-solid border-2 border-blue-500  rounded-lg"
             >
               <i className="text-blue-600 fab fa-google mr-3"></i>Sign in with
               Google

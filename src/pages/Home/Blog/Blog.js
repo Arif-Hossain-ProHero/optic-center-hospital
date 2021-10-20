@@ -47,12 +47,13 @@ const Blog = () => {
               </p>
               <p className="text-gray-700 text-base">
                 Eye care is just as important for children as it is for adults.
-                The sooner you teach your children how to care for their eyes...
+                The sooner you teach your children how to care for their eyes
+                The sooner you teach your their eyes...
               </p>
             </div>
             <div className="px-6 pt-4 pb-2 text-center pb-5">
               <Link className="text-red-500" to="/read">
-                Read More<i class="fas fa-arrow-right"></i>
+                Read More<i className="fas fa-arrow-right"></i>
               </Link>
             </div>
           </div>
@@ -79,7 +80,7 @@ const Blog = () => {
             </div>
             <div className="px-6 pt-4 pb-2 text-center pb-5">
               <Link className="text-red-500" to="/read">
-                Read More<i class="fas fa-arrow-right"></i>
+                Read More<i className="fas fa-arrow-right"></i>
               </Link>
             </div>
           </div>
@@ -106,7 +107,7 @@ const Blog = () => {
             </div>
             <div className="px-6 pt-4 pb-2 text-center pb-5">
               <Link className="text-red-500" to="/read">
-                Read More<i class="fas fa-arrow-right"></i>
+                Read More<i className="fas fa-arrow-right"></i>
               </Link>
             </div>
           </div>
@@ -133,7 +134,7 @@ const Blog = () => {
             </div>
             <div className="px-6 pt-4 pb-2 text-center pb-5">
               <Link className="text-red-500" to="/read">
-                Read More<i class="fas fa-arrow-right"></i>
+                Read More<i className="fas fa-arrow-right"></i>
               </Link>
             </div>
           </div>
@@ -154,12 +155,13 @@ const Blog = () => {
               </p>
               <p className="text-gray-700 text-base">
                 More and more children are being diagnosed with myopia, a common
-                refractive error associated with developing serious eye...
+                refractive error associated with developing serious eye.
+                Childhood Myopia Is in Crisis...
               </p>
             </div>
             <div className="px-6 pt-4 pb-2 text-center pb-5">
               <Link className="text-red-500" to="/read">
-                Read More<i class="fas fa-arrow-right"></i>
+                Read More<i className="fas fa-arrow-right"></i>
               </Link>
             </div>
           </div>

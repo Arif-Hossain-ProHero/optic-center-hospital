@@ -11,6 +11,7 @@ import Login from "./pages/Login/Login";
 import PrivateRoute from "./pages/PrivateRoute/PrivateRoute";
 import Registration from "./pages/Registration/Registration";
 import ServiceDetail from "./pages/ServiceDetail/ServiceDetail";
+import NotFound from "./pages/NotFound/NotFound";
 import Test from "./pages/Test/Test";
 
 function App() {
@@ -47,6 +48,9 @@ function App() {
           {/* <PrivateRoute path="/shop">
             <Shop></Shop>
           </PrivateRoute> */}
+          <Route path="*">
+            <NotFound></NotFound>
+          </Route>
         </Switch>
         <Footer />
       </BrowserRouter>

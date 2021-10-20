@@ -8,7 +8,7 @@ const Banner = () => {
         <div className="w-3/5">
           <h2 className="text-2xl font-semibold">
             <span className="text-purple-900">
-              <i class="fas fa-eye"></i>ptic
+              <i className="fas fa-eye"></i>ptic
             </span>{" "}
             Eye Center
           </h2>
