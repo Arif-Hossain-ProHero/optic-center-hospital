@@ -1,10 +1,10 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyDb-fAjzNz-6MZ1VuneuJF4HoLfgYma_Yo",
-  authDomain: "optic-center.firebaseapp.com",
-  projectId: "optic-center",
-  storageBucket: "optic-center.appspot.com",
-  messagingSenderId: "7964994579",
-  appId: "1:7964994579:web:56d703c5d2478fc6fc63e6",
+  apiKey: "AIzaSyDuve0VZnFCAfteMCxWWhKJdyyjZaorx-s",
+  authDomain: "optic-center-hospital.firebaseapp.com",
+  projectId: "optic-center-hospital",
+  storageBucket: "optic-center-hospital.appspot.com",
+  messagingSenderId: "820245910083",
+  appId: "1:820245910083:web:09178ce65279037cf6baf6",
 };
 
 export default firebaseConfig;
