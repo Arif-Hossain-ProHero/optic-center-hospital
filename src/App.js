@@ -42,9 +42,6 @@ function App() {
           <PrivateRoute path="/appointment">
             <Appointment></Appointment>
           </PrivateRoute>
-          <PrivateRoute path="/shop">
-            <Shop></Shop>
-          </PrivateRoute>
           <PrivateRoute path="/contact">
             <Contact></Contact>
           </PrivateRoute>

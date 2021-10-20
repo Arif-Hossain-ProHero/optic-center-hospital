@@ -89,13 +89,6 @@ function NavBar() {
                   >
                     About Us
                   </Link>
-
-                  <Link
-                    to="/shop"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Shop
-                  </Link>
                 </div>
               </div>
             </div>
@@ -198,13 +191,6 @@ function NavBar() {
               className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
             >
               About
-            </Link>
-
-            <Link
-              to="/shop"
-              className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-            >
-              Shop
             </Link>
           </div>
         </div>
