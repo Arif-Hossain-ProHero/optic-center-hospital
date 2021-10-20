@@ -116,12 +116,10 @@ const Registration = () => {
               <div className="mx-auto">
                 <button
                   onClick={googleSinginHandler}
-                  className="w-full px-6 py-2 mt-4 text-black bg-white border-solid border-2 border-blue-500  rounded-lg"
+                  className="w-full px-6 py-2 mt-4 text-black font-semibold bg-white border-solid border-2 border-blue-500  rounded-lg"
                 >
-                  Sign in with Google
-                </button>
-                <button className="w-full px-6 py-2 mt-4 text-white bg-blue-600 rounded-lg hover:bg-blue-900">
-                  Sign in with Facebook
+                  <i className="text-blue-600 fab fa-google mr-4 "></i>Sign in
+                  with Google
                 </button>
               </div>
             </div>

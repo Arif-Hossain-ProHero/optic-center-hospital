@@ -1,7 +1,7 @@
 import userEvent from "@testing-library/user-event";
 import React, { useState } from "react";
 import { useHistory } from "react-router";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 
 const Login = () => {
@@ -9,6 +9,10 @@ const Login = () => {
     useAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const history = useHistory();
+  const location = useLocation();
+
+  const redirect_uri = location.state?.from || "/home";
 
   const emailHandler = (e) => {
     setEmail(e.target.value);
@@ -31,7 +35,9 @@ const Login = () => {
   };
 
   const googleSigninHandler = () => {
-    googleSignIn();
+    googleSignIn().then((res) => {
+      history.push(redirect_uri);
+    });
   };
   return (
     <div>
@@ -94,9 +100,10 @@ const Login = () => {
           <div className="mx-auto">
             <button
               onClick={googleSigninHandler}
-              class="w-full px-6 py-2 mt-4 text-black bg-white border-solid border-2 border-blue-500  rounded-lg"
+              class="w-full px-6 py-2 font-semibold mt-4 text-black bg-white border-solid border-2 border-blue-500  rounded-lg"
             >
-              Sign in with Google
+              <i className="text-blue-600 fab fa-google mr-3"></i>Sign in with
+              Google
             </button>
           </div>
         </div>

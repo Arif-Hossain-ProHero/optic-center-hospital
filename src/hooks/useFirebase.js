@@ -33,28 +33,28 @@ const useFirebase = () => {
   };
   // sign in using google account
   const googleSignIn = () => {
-    signInWithPopup(auth, googleProvider)
-      .then((result) => {
-        setUser(result.user);
-        console.log(result.user);
-        setMessage("Successfully sign in.");
-      })
-      .catch((error) => {
-        setError("Can not sign in using google.");
-      });
+    return signInWithPopup(auth, googleProvider);
+    // .then((result) => {
+    //   setUser(result.user);
+    //   console.log(result.user);
+    //   setMessage("Successfully sign in.");
+    // })
+    // .catch((error) => {
+    //   setError("Can not sign in using google.");
+    // });
   };
 
   // login user
   const passwordLogin = (email, password) => {
-    signInWithEmailAndPassword(auth, email, password)
-      .then((result) => {
-        console.log(result.user);
-        setUser(result.user);
-        setMessage("Successfully sign in.");
-      })
-      .catch((error) => {
-        setError("Can't log in.");
-      });
+    return signInWithEmailAndPassword(auth, email, password);
+    // .then((result) => {
+    //   console.log(result.user);
+    //   setUser(result.user);
+    //   setMessage("Successfully sign in.");
+    // })
+    // .catch((error) => {
+    //   setError("Can't log in.");
+    // });
   };
   // password reset
   const passwordReset = (email) => {

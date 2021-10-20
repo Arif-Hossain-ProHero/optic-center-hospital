@@ -29,7 +29,6 @@ const Footer = () => {
           <div className="flex flex-col leading-8">
             <Link to="/doctors">Doctors</Link>
             <Link to="/about">About</Link>
-            <Link to="/services">Services</Link>
             <Link to="/departments">Departments</Link>
             <Link to="/contact">Contact</Link>
           </div>
@@ -47,7 +46,7 @@ const Footer = () => {
         </div>
       </div>
       {/* copyright */}
-      <div className="bg-gray-600 text-center p-2 text-center">
+      <div className="bg-gray-200 text-center p-2">
         <p>
           Copyright &copy; 2021. All Rights Reserved By Optic-center.{" "}
           <Link to="/policy">Privacy Policy.</Link>
